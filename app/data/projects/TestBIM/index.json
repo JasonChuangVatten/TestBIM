@@ -1,0 +1,82 @@
+{
+  "modelId": "TestBIM",
+  "modelLabel": "TestBIM",
+  "models": [
+    {
+      "id": "供油",
+      "name": "供油"
+    },
+    {
+      "id": "空調",
+      "name": "空調"
+    },
+    {
+      "id": "空調電",
+      "name": "空調電"
+    },
+    {
+      "id": "門禁及監控",
+      "name": "門禁及監控"
+    },
+    {
+      "id": "消防",
+      "name": "消防"
+    },
+    {
+      "id": "排水",
+      "name": "排水"
+    },
+    {
+      "id": "接地",
+      "name": "接地"
+    },
+    {
+      "id": "插座",
+      "name": "插座"
+    },
+    {
+      "id": "給水",
+      "name": "給水"
+    },
+    {
+      "id": "雲端資訊中心",
+      "name": "雲端資訊中心"
+    },
+    {
+      "id": "照明",
+      "name": "照明"
+    },
+    {
+      "id": "電力",
+      "name": "電力"
+    },
+    {
+      "id": "電信",
+      "name": "電信"
+    },
+    {
+      "id": "環控",
+      "name": "環控"
+    },
+    {
+      "id": "避雷",
+      "name": "避雷"
+    }
+  ],
+  "viewerConfigs": {
+    "backgroundColor": [
+      0,
+      0,
+      0
+    ]
+  },
+  "viewerContent": {
+    "modelsLoaded": [ "雲端資訊中心", "電力", "消防", "空調", "排水", "給水" ]
+  },
+  "viewerState": {
+    "tabOpen": "models",
+    "expandObjectsTree": 1,
+    "expandClassesTree": 1,
+    "expandStoreysTree": 2
+  }
+}
