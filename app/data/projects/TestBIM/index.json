@@ -71,7 +71,7 @@
     ]
   },
   "viewerContent": {
-    "modelsLoaded": [ "雲端資訊中心", "電力", "消防", "空調", "排水", "給水" ]
+    "modelsLoaded": [ "雲端資訊中心" ]
   },
   "viewerState": {
     "tabOpen": "models",
