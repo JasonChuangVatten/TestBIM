@@ -64,9 +64,9 @@
                 enableMeasurements: true,
                 canvasElement: document.getElementById("myCanvas"), // WebGL canvas
                 keyboardEventsElement: document, // Optional, defaults to document
-                //explorerElement: document.getElementById("myExplorer"), // Left panel
-                //toolbarElement: document.getElementById("myToolbar"), // Toolbar
-                //inspectorElement: document.getElementById("myInspector"), // Right panel
+                explorerElement: document.getElementById("myExplorer"), // Left panel
+                toolbarElement: document.getElementById("myToolbar"), // Toolbar
+                inspectorElement: document.getElementById("myInspector"), // Right panel
                 navCubeCanvasElement: document.getElementById("myNavCubeCanvas"),
                 busyModelBackdropElement: document.getElementById("myViewer"),
                 enableEditModels: enableEditModels
@@ -147,7 +147,7 @@
                     bimViewer.openTab(tab);
                 }
                 watchHashParams();
-
+                bimViewer.setControlsEnabled(false);
             },
                 (errorMsg) => {
                     console.error(errorMsg);
