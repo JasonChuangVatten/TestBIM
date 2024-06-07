@@ -64,9 +64,9 @@
                 enableMeasurements: true,
                 canvasElement: document.getElementById("myCanvas"), // WebGL canvas
                 keyboardEventsElement: document, // Optional, defaults to document
-                explorerElement: document.getElementById("myExplorer"), // Left panel
-                toolbarElement: document.getElementById("myToolbar"), // Toolbar
-                inspectorElement: document.getElementById("myInspector"), // Right panel
+                //explorerElement: document.getElementById("myExplorer"), // Left panel
+                //toolbarElement: document.getElementById("myToolbar"), // Toolbar
+                //inspectorElement: document.getElementById("myInspector"), // Right panel
                 navCubeCanvasElement: document.getElementById("myNavCubeCanvas"),
                 busyModelBackdropElement: document.getElementById("myViewer"),
                 enableEditModels: enableEditModels
@@ -152,19 +152,6 @@
                 (errorMsg) => {
                     console.error(errorMsg);
                 });
-
-            //bimViewer.scene.highlightMaterial.alpha = 0.5;
-            bimViewer.scene.input.on("mousedown", function (coords) {
-
-                const pickResult = viewer.scene.pick({
-                    canvasPos: coords
-                });
-
-                if (pickResult) {
-                    console.log(pickResult.entity.id);
-                    pickResult.entity.highlighted = true;
-                }
-            });
 
             function watchHashParams() {
                 let lastHash = "";
