@@ -147,7 +147,7 @@
                     bimViewer.openTab(tab);
                 }
                 watchHashParams();
-                bimViewer.setControlsEnabled(false);
+                bimViewer.hideSectionEditControl();
             },
                 (errorMsg) => {
                     console.error(errorMsg);
