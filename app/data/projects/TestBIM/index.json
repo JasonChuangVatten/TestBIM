@@ -64,11 +64,7 @@
     }
   ],
   "viewerConfigs": {
-    "backgroundColor": [
-      0,
-      0,
-      0
-    ]
+    "backgroundColor": [ 0.878, 0.945, 0.992 ]
   },
   "viewerContent": {
     "modelsLoaded": [ "雲端資訊中心" ]
