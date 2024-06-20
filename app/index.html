@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -200,13 +199,11 @@
                                 break;
                             }
                             const objectIdArray = objectIds.split(",");
-                            bimViewer.setAllObjectsSelected(false);
-                            bimViewer.setObjectsSelected(objectIdArray, true);
                             bimViewer.viewFitObjects(objectIdArray, () => {
                             });
                             break;
                         case "clearFocusObjects":
-                            bimViewer.setAllObjectsSelected(false);
+                            bimViewer.setAllObjectsSelected(false, params.objectIds);
                             bimViewer.viewFitAll();
                             // TODO: view fit nothing?
                             break;
