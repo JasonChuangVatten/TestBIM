@@ -67,7 +67,7 @@
     "backgroundColor": [ 0.878, 0.945, 0.992 ],
     "viewFitDuration": 0.5,
     "perspectiveFOV": 35,
-    "viewFitFOV": 60,
+    "viewFitFOV": 55,
     "cameraNear": 0.05,
     "cameraFar": 3000.0,
     "pbrEnabled": true,
@@ -82,7 +82,11 @@
     "modelsLoaded": [ "雲端資訊中心" ]
   },
   "viewerState": {
-    "setCamera": [ 1000, 1000, 100 ],
+    "setCamera": [
+      [ -10, 0, 0 ],
+      [ -10, 0, 0 ],
+      [ 0, 1, 0 ]
+    ],
     "tabOpen": "models",
     "expandObjectsTree": 0,
     "expandClassesTree": 0,
