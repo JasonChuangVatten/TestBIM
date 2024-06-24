@@ -65,18 +65,8 @@
   ],
   "viewerConfigs": {
     "backgroundColor": [ 0.878, 0.945, 0.992 ],
-    "viewFitDuration": 0.5,
     "perspectiveFOV": 35,
-    "viewFitFOV": 55,
-    "cameraNear": 0.05,
-    "cameraFar": 3000.0,
-    "pbrEnabled": true,
-    "xrayPickable": true,
-    "saoEnabled": true,
-    "smartPivot": true,
-    "dtxEnabled": true,
-    "showSpaces": false,
-    "edgesEnabled": false
+    "viewFitFOV": 55
   },
   "viewerContent": {
     "modelsLoaded": [ "雲端資訊中心" ]
