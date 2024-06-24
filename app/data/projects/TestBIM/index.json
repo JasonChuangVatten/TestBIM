@@ -64,15 +64,28 @@
     }
   ],
   "viewerConfigs": {
-    "backgroundColor": [ 0.878, 0.945, 0.992 ]
+    "backgroundColor": [ 0.878, 0.945, 0.992 ],
+    "viewFitDuration": 0.5,
+    "perspectiveFOV": 35,
+    "viewFitFOV": 60,
+    "cameraNear": 0.05,
+    "cameraFar": 3000.0,
+    "pbrEnabled": true,
+    "xrayPickable": true,
+    "saoEnabled": true,
+    "smartPivot": true,
+    "dtxEnabled": true,
+    "showSpaces": false,
+    "edgesEnabled": false
   },
   "viewerContent": {
     "modelsLoaded": [ "雲端資訊中心" ]
   },
   "viewerState": {
+    "setCamera": [ 1000, 1000, 100 ],
     "tabOpen": "models",
-    "expandObjectsTree": 1,
-    "expandClassesTree": 1,
-    "expandStoreysTree": 2
+    "expandObjectsTree": 0,
+    "expandClassesTree": 0,
+    "expandStoreysTree": 0
   }
 }
