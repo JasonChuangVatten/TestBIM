@@ -6,7 +6,7 @@ const api_url = 'https://tpc.hmidata.tw/ScadaApi/ValueList';
 
 $(function () {
     'use strict';
-    
+
     showAlarmChart([130, 70, 126, 200, 120]);
 
     showParams('params.json');
@@ -50,11 +50,13 @@ async function showParams(filename) {
             url: api_url,
             data: JSON.stringify(objData1),
             method: "POST",
-            contentType: "application/json",
+            contentType: "application/json;charset=utf-8;",
             success: function (numData) {
                 if (numData) {
+                    console.log("num_bim success");
                     showNumData(numData);
                 } else {
+                    console.log("num_bim fail");
                     displayNumData('testnum.json');
                 }
             },
@@ -73,11 +75,13 @@ async function showParams(filename) {
             url: api_url,
             data: JSON.stringify(objData2),
             method: "POST",
-            contentType: "application/json",
+            contentType: "application/json;charset=utf-8;",
             success: function (statusData) {
                 if (statusData) {
+                    console.log("status_bim success");
                     showStatusData(statusData);
                 } else {
+                    console.log("status_bim fail");
                     displayStatusData('teststatus.json');
                 }
             },
@@ -96,7 +100,7 @@ async function showParams(filename) {
             url: api_url,
             data: JSON.stringify(objData3),
             method: "POST",
-            contentType: "application/json",
+            contentType: "application/json;charset=utf-8;",
             success: function (oil_chart) {
                 if (oil_chart && oil_chart > 0) {
                     console.log("oil_chart success");
@@ -115,7 +119,7 @@ async function showParams(filename) {
 
         console.log(alert_chart_bim);
     }
-} 
+}
 
 async function loadfetchJsonData(filename) {
     try {
