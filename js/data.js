@@ -50,7 +50,7 @@ async function showParams(filename) {
             url: api_url,
             data: JSON.stringify(objData1),
             method: "POST",
-            contentType: "application/json;",
+            contentType: "application/json",
             success: function (numData) {
                 if (numData) {
                     console.log("num_bim success");
@@ -75,7 +75,7 @@ async function showParams(filename) {
             url: api_url,
             data: JSON.stringify(objData2),
             method: "POST",
-            contentType: "application/json;",
+            contentType: "application/json",
             success: function (statusData) {
                 if (statusData) {
                     console.log("status_bim success");
@@ -100,7 +100,7 @@ async function showParams(filename) {
             url: api_url,
             data: JSON.stringify(objData3),
             method: "POST",
-            contentType: "application/json;",
+            contentType: "application/json",
             success: function (oil_chart) {
                 if (oil_chart && oil_chart > 0) {
                     console.log("oil_chart success");
