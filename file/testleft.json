@@ -1,0 +1,64 @@
+{
+  "ret": [
+    ////消防告警
+    {
+      "tagname": "3D_CO_FIR_000_ERYALA",
+      "value": "0"
+    },
+    {
+      "tagname": "3D_CO_FIR_000_AIRALA",
+      "value": "0"
+    },
+    {
+      "tagname": "3D_CO_FIR_000_FOMALA",
+      "value": "0"
+    },
+    {
+      "tagname": "3D_CO_FIR_000_OILALA",
+      "value": "1"
+    },
+    ////#alarm-chart
+    //{
+    //  "tagname": "3D_CO_SUM_000_TEMALA",
+    //  "value": "130"
+    //},
+    //{
+    //  "tagname": "3D_CO_SUM_000_ELEALA",
+    //  "value": "30"
+    //},
+    //{
+    //  "tagname": "3D_CO_SUM_000_ACIALA",
+    //  "value": "126"
+    //},
+    //{
+    //  "tagname": "3D_CO_SUM_000_LEKALA",
+    //  "value": "200"
+    //},
+    //{
+    //  "tagname": "3D_CO_SUM_000_CCVALA",
+    //  "value": "120"
+    //},
+    //發電機運轉狀態
+    {
+      "tagname": "RF_DI_IRG_G01_GENSTA",
+      "value": "0"
+    },
+    {
+      "tagname": "RF_DI_IRG_G02_GENSTA",
+      "value": "0"
+    },
+    {
+      "tagname": "RF_DI_IRG_G03_GENSTA",
+      "value": "0"
+    },
+    {
+      "tagname": "RF_DI_BFG_G04_GENSTA",
+      "value": "1"
+    }
+    ////地下油槽油量#oil-chart
+    //{
+    //  "tagname": "3D_AI_OIL_001_PERTAG",
+    //  "value": "85"
+    //}
+  ]
+}

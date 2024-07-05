@@ -1,0 +1,43 @@
+{
+  "ret": [
+    //停車管理
+    {
+      "tagname": "3D_AI_PRK_000_EMPLOG",
+      "value": "3"
+    },
+    //停車場空氣品質(ppm)
+    {
+      "tagname": "B1_AI_MFS_001_CODT00",
+      "value": "11"
+    },
+    {
+      "tagname": "3D_AI_MFS_001_CODALA",
+      "value": "0"
+    },
+    {
+      "tagname": "3D_AI_EAF_000_STASUS",
+      "value": "0"
+    },
+    {
+      "tagname": "B1_AI_MFS_001_CO2DT0",
+      "value": "26"
+    },
+    {
+      "tagname": "3D_AI_MFS_001_CO2ALA",
+      "value": "1"
+    },
+    //大廳空氣品質
+    {
+      "tagname": "1F_AI_MFS_001_CO2DT1",
+      "value": "533"
+    },
+    {
+      "tagname": "1F_AI_RTH_001_TEMP01",
+      "value": "38"
+    },
+    {
+      "tagname": "1F_AI_RTH_001_HUMI01",
+      "value": "65"
+    }
+  ]
+}

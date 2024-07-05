@@ -64,22 +64,20 @@
     }
   ],
   "viewerConfigs": {
-    "backgroundColor": [ 0.878, 0.945, 0.992 ],
-    "perspectiveFOV": 35,
-    "viewFitFOV": 55
+    "backgroundColor": [ 0.878, 0.945, 0.992 ]
   },
   "viewerContent": {
     "modelsLoaded": [ "雲端資訊中心" ]
   },
   "viewerState": {
+    "tabOpen": "models",
+    "expandObjectsTree": 1,
+    "expandClassesTree": 1,
+    "expandStoreysTree": 2,
     "setCamera": [
-      [ -10, 0, 0 ],
+      [ 10, 0, 0 ],
       [ -10, 0, 0 ],
       [ 0, 1, 0 ]
-    ],
-    "tabOpen": "models",
-    "expandObjectsTree": 0,
-    "expandClassesTree": 0,
-    "expandStoreysTree": 0
+    ]
   }
 }

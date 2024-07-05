@@ -1,0 +1,72 @@
+{
+  "retdata": [
+    {
+      "Tagname": "3D_AI_PRK_000_EMPLOG",
+      "Value": "5"
+    },
+    {
+      "Tagname": "B1_AI_MFS_001_CODT00",
+      "Value": "11"
+    },
+    {
+      "Tagname": "B1_AI_MFS_001_CO2DT0",
+      "Value": "26"
+    },
+    {
+      "Tagname": "1F_AI_MFS_001_CO2DT1",
+      "Value": "566"
+    },
+    {
+      "Tagname": "1F_AI_RTH_001_TEMP01",
+      "Value": "38"
+    },
+    {
+      "Tagname": "1F_AI_RTH_001_HUMI01",
+      "Value": "65"
+    },
+    {
+      "Tagname": "3D_AI_OTH_000_TEMP00",
+      "Value": "36"
+    },
+    {
+      "Tagname": "3D_AI_PV0_000_POSKWH",
+      "Value": "123"
+    },
+    {
+      "Tagname": "3D_CO_DGK_000_POSKWH",
+      "Value": "95631"
+    },
+    {
+      "Tagname": "PUE",
+      "Value": "1.09"
+    },
+    {
+      "Tagname": "3D_AI_ECK_000_POSKWH",
+      "Value": "56"
+    },
+    {
+      "Tagname": "3D_AI_UCK_000_POSKWH",
+      "Value": "36"
+    },
+    {
+      "Tagname": "3D_AI_ACK_000_POSKWH",
+      "Value": "47"
+    },
+    {
+      "Tagname": "3D_AI_FCK_000_POSKWH",
+      "Value": "32"
+    },
+    {
+      "Tagname": "3D_AI_DIW_000_WFRATE",
+      "Value": "345678"
+    },
+    {
+      "Tagname": "3D_AI_AWC_000_WFRATE",
+      "Value": "123456"
+    },
+    {
+      "Tagname": "3D_AI_PWC_000_WFRATE",
+      "Value": "222222"
+    }
+  ]
+}

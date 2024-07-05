@@ -1,0 +1,48 @@
+{
+  "retdata": [
+    {
+      "Tagname": "3D_CO_FIR_000_ERYALA",
+      "Value": "1"
+    },
+    {
+      "Tagname": "3D_CO_FIR_000_FOMALA",
+      "Value": "1"
+    },
+    {
+      "Tagname": "3D_CO_FIR_000_AIRALA",
+      "Value": "0"
+    },
+    {
+      "Tagname": "3D_CO_FIR_000_OILALA",
+      "Value": "1"
+    },
+    {
+      "Tagname": "RF_DI_IRG_G01_GENSTA",
+      "Value": "0"
+    },
+    {
+      "Tagname": "RF_DI_IRG_G02_GENSTA",
+      "Value": "1"
+    },
+    {
+      "Tagname": "RF_DI_IRG_G03_GENSTA",
+      "Value": "0"
+    },
+    {
+      "Tagname": "RF_DI_BFG_G04_GENSTA",
+      "Value": "1"
+    },
+    {
+      "Tagname": "3D_AI_MFS_001_CODALA",
+      "Value": "0"
+    },
+    {
+      "Tagname": "3D_AI_EAF_000_STASUS",
+      "Value": "0"
+    },
+    {
+      "Tagname": "3D_AI_MFS_001_CO2ALA",
+      "Value": "1"
+    }
+  ]
+}

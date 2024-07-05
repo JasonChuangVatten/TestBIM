@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>台電彰化雲端資料中心 - 智慧型中央監控整合系統</title>
+    <link rel="shortcut icon" href="images/apple-touch-icon.png" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script type="text/javascript" src="https://mbostock.github.com/d3/d3.js?1.27.1"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="wrap">
+    <nav class="navbar navbar-primary bg-primary fixed-top">
+        <a class="navbar-brand mr-auto" href="#">
+            <img src="images/logo.png" class="brand" alt="">台電彰化雲端資料中心 -
+            智慧型中央監控整合系統
+        </a>
+        <div>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-primary" onclick="callParentChangeMap('114')">
+                        <span class="mdi mdi-home-outline"></span>
+                        <span class="nav-text">首頁</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-primary" onclick="callParentChangeMap('1')">
+                        <span class="mdi mdi-chart-box-outline"></span>
+                        <span class="nav-text">圖控</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-primary" onclick="callParentChangeMap('115')">
+                        <span class="mdi mdi-wrench-cog-outline"></span>
+                        <span class="nav-text w-4w">設備管理</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-primary" onclick="callParentDoLogOut('8')">
+                        <span class="mdi mdi-account-outline"></span>
+                        <span class="nav-text">登出</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="left">
+            <div class="alarmdiv">
+                <h4 class="card-title float-start text-danger"><i class="mdi mdi-bell mr-2"></i>告警總覽</h4>
+                <div class="clearfix pb-4">
+                    <table class="alarm-row">
+                        <tr>
+                            <td class="text-danger"><span style="padding-left:0">消防告警</span></td>
+                            <td>
+                                <button id="3D_CO_FIR_000_ERYALA" class="btn-sm btn-danger">即早</button>
+                                <button id="3D_CO_FIR_000_FOMALA" class="btn-sm btn-danger">泡沫</button>
+                                <button id="3D_CO_FIR_000_AIRALA" class="btn-sm btn-success">氣霧</button>
+                                <button id="3D_CO_FIR_000_OILALA" class="btn-sm btn-success">燃油</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="alarm-chart">
+                    <canvas id="alarm-chart"></canvas>
+                </div>
+            </div>
+            <div class="" style="margin-top:-20px ;">
+                <h4 class="card-title float-start text-primary"><i class="mdi mdi-flash-alert mr-2"></i>發電機運轉狀態</h4>
+                <table class="dynamo">
+                    <tr>
+                        <td>資訊發電機1：</td>
+                        <td><button id="RF_DI_IRG_G01_GENSTA" class="btn btn-md btn-stop">停止</button></td>
+                    </tr>
+                    <tr>
+                        <td>資訊發電機2：</td>
+                        <td><button id="RF_DI_IRG_G02_GENSTA" class="btn btn-md btn-stop">停止</button></td>
+                    </tr>
+                    <tr>
+                        <td>資訊發電機3：</td>
+                        <td><button id="RF_DI_IRG_G03_GENSTA" class="btn btn-md btn-stop">停止</button></td>
+                    </tr>
+                    <tr>
+                        <td>消防發電機：</td>
+                        <td><button id="RF_DI_BFG_G04_GENSTA" class="btn btn-md btn-danger">運轉</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h4 class="card-title float-start text-primary"><i class="mdi mdi-cup-water mr-2"></i>地下油槽油量</h4>
+                <div class="oil-chart">
+                    <canvas id="oil-chart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="main-div">
+            <div class="bimiframe">
+                <!--<iframe width="100%" height="auto" src="app/index.html?projectId=TestBIM" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>-->
+            </div>
+            <div class="air-quality d-flex flex-row justify-content-between align-baseline">
+                <div class="air-div-A">
+                    <div class="position-relative mb-2">
+                        <h4 class="card-title float-start text-primary d-block mb-0">
+                            <i class="mdi mdi-car-clock mr-2"></i>停車管理
+                        </h4>
+                        <div class="text-right pr-4 car-title">
+                            剩餘車位：<span id="3D_AI_PRK_000_EMPLOG" class="text-danger car-value"></span> / 8 輛
+                        </div>
+                    </div>
+                    <div class="air-div-A-inner">
+                        <table class="table-nowrap text-nowrap flex-nowrap">
+                            <tr class="align-baseline">
+                                <h4 class="card-title float-start text-primary">
+                                    <i class="mdi mdi-clouds mr-2"></i>停車場空氣品質<span class="small">(ppm)</span>
+                                </h4>
+                                <td class="text-nowrap">
+                                    <div class="w-100 d-flex flex-row align-items-center justify-content-start">
+                                        <div class="text-right w-50p">CO:</div>
+                                        <div id="B1_AI_MFS_001_CODT00" class="text-success d-inline-block alarm-value"></div>
+                                        <button id="3D_AI_MFS_001_CODALA"
+                                            class="btn btn-sm btn-success px-2">安全</button>
+                                    </div>
+                                </td>
+                                <td class="w-50 d-flex flex-row align-items-center w-50">
+                                    <div class="w-100 d-flex flex-row align-items-center">
+                                        <div class="text-left w-90p">引風機狀態:</div>
+                                        <button id="3D_AI_EAF_000_STASUS" class="btn btn-sm btn-danger px-2">停止</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="align-baseline">
+                                <td colspan="2" class="text-nowrap">
+                                    <div class="w-100 d-flex flex-row align-items-center justify-content-start">
+                                        <div class="text-right w-50p">CO2: </div>
+                                        <div id="B1_AI_MFS_001_CO2DT0" class="text-success d-inline-block alarm-value"></div>
+                                        <button id="3D_AI_MFS_001_CO2ALA" class="btn btn-sm btn-danger px-2">危險</button>
+                                    </div>
+                                </td>
+                        </table>
+                    </div>
+                </div>
+                <div class="air-div-B position-relative">
+                    <div class="position-relative mb-2">
+                        <h4 class="card-title text-primary d-block"><i class="mdi mdi-clouds mr-2"></i>大廳空氣品質</h4>
+                        <div class="row mt-0 text-right d-flex justify-content-end pr-5 mb-3">
+                            <div class="text-left air-title">CO2<br><span class="small">(ppm)</span></div>
+                            <div id="1F_AI_MFS_001_CO2DT1" class="text-dark air-value"></div>
+                        </div>
+                    </div>
+                    <div id="linear-gauge" class="mt-2"></div>
+                    <div class="row container position-absolute" style="top:180px">
+                        <div class="text-nowrap d-flex w-50">
+                            <div class="text-left air-title">溫度<br><span class="small">(°C)</span></div>
+                            <div class="text-dark air-value">
+                                <i class="mdi mdi-thermometer text-primary mr-2"></i><span
+                                    id="1F_AI_RTH_001_TEMP01"></span>
+                            </div>
+                        </div>
+                        <div class="text-nowrap d-flex w-50">
+                            <div class="text-left air-title">濕度<br><span class="small">(%)</span></div>
+                            <div class="text-dark air-value">
+                                <i class="mdi mdi-water-opacity text-primary mr-2"></i><span
+                                    id="1F_AI_RTH_001_HUMI01"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="card info-card">
+                <div class="card-body">
+                    <div class="clearfix">
+                        <h4 class="card-title float-start text-primary">
+                            <i class="mdi mdi-battery-charging mr-2"></i>能源管理
+                        </h4>
+                    </div>
+
+                    <div class="battery d-flex justify-content-between">
+                        <div class="area3 text-center w-50">
+                            <h5>戶外溫度</h5>
+                            <div>
+                                <span id="3D_AI_OTH_000_TEMP00" class="temp-velue"></span> °C
+                            </div>
+                        </div>
+
+                        <div class="area3 text-center w-50">
+                            <h5>太陽能</h5>
+                            <div>
+                                <span id="3D_AI_PV0_000_POSKWH" class="temp-velue"></span> W
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card info-card">
+                <div class="card-body">
+                    <div class="">
+                        <p class="text-muted">本日累積發電量</p>
+                    </div>
+                    <div class="battery w-100">
+                        <div class="area1 text-center">
+                            <div>
+                                <span id="3D_CO_DGK_000_POSKWH" class="temp-velue"></span> WHr
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card info-card">
+                <div class="card-body">
+                    <div class="">
+                        <p class="text-muted">電力使用效率PUE</p>
+                    </div>
+                    <div class="battery w-100">
+                        <div class="area1 text-center">
+                            <div>
+                                <span id="PUE" class="temp-velue"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card info-card battery d-flex justify-content-between">
+                <div class="card-body">
+                    <div>
+                        <p class="text-muted">各系統即時用電量</p>
+                    </div>
+
+                    <div class="w-100 battery d-flex justify-content-between">
+                        <div class="area-electric text-center w-50">
+                            <h5>電&nbsp;&nbsp;&nbsp;力&nbsp;&nbsp;&nbsp;</h5>
+                            <div>
+                                <span id="3D_AI_ECK_000_POSKWH" class="temp-velue"></span>&nbsp;W
+                            </div>
+                        </div>
+
+                        <div class="Firefighting text-center w-50">
+                            <h5>空&nbsp;&nbsp;調</h5>
+                            <div>
+                                <span id="3D_AI_ACK_000_POSKWH" class="temp-velue"></span>&nbsp;W
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-100 battery d-flex justify-content-between mt-4">
+                        <div class="area-electric text-center w-50">
+                            <h5>U&nbsp;P&nbsp;S</h5>
+                            <div>
+                                <span id="3D_AI_UCK_000_POSKWH" class="temp-velue"></span>&nbsp;W
+                            </div>
+                        </div>
+
+                        <div class="Firefighting text-center w-50">
+                            <h5>消&nbsp;&nbsp;防</h5>
+                            <div>
+                                <span id="3D_AI_FCK_000_POSKWH" class="temp-velue"></span>&nbsp;W
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card info-card ">
+                <div class="card-body">
+                    <div class="">
+                        <p class="text-muted">本日自來水進水量累積</p>
+                    </div>
+
+                    <div class="battery w-100">
+                        <div class="area-water1 text-center">
+                            <div>
+                                <span id="3D_AI_DIW_000_WFRATE" class="temp-velue"></span> 立方米
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card info-card ">
+                <div class="card-body">
+                    <div class="">
+                        <p class="text-muted">本日空調用水量累積</p>
+                    </div>
+
+                    <div class="battery w-100">
+                        <div class="area-water2 text-center">
+                            <div>
+                                <span id="3D_AI_AWC_000_WFRATE" class="temp-velue"></span> 立方米
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card info-card ">
+                <div class="card-body">
+                    <div class="">
+                        <p class="text-muted">本日民生水量累積</p>
+                    </div>
+
+                    <div class="battery w-100">
+                        <div class="area-water3 text-center">
+                            <div>
+                                <span id="3D_AI_PWC_000_WFRATE" class="temp-velue"></span> 立方米
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-box-and-violin-plot@4.0.0/build/Chart.BoxPlot.min.js"></script>--> 
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/data.js"></script>
+</body>
+
+</html>

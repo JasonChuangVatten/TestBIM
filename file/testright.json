@@ -1,0 +1,51 @@
+{
+  "ret": [
+    //能源管理
+    {
+      "tagname": "3D_AI_OTH_000_TEMP00",
+      "value": "36"
+    },
+    {
+      "tagname": "3D_AI_PV0_000_POSKWH",
+      "value": "123"
+    },
+    {
+      "tagname": "3D_CO_DGK_000_POSKWH",
+      "value": "95631"
+    },
+    {
+      "tagname": "PUE",
+      "value": "1.09"
+    },
+    //各系統即時用電量
+    {
+      "tagname": "3D_AI_ECK_000_POSKWH",
+      "value": "56"
+    },
+    {
+      "tagname": "3D_AI_UCK_000_POSKWH",
+      "value": "36"
+    },
+    {
+      "tagname": "3D_AI_ACK_000_POSKWH",
+      "value": "47"
+    },
+    {
+      "tagname": "3D_AI_FCK_000_POSKWH",
+      "value": "32"
+    },
+    //水量累積
+    {
+      "tagname": "3D_AI_DIW_000_WFRATE",
+      "value": "345678"
+    },
+    {
+      "tagname": "3D_AI_AWC_000_WFRATE",
+      "value": "123456"
+    },
+    {
+      "tagname": "3D_AI_PWC_000_WFRATE",
+      "value": "222222"
+    }
+  ]
+}
